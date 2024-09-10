@@ -11,11 +11,12 @@ function solveEquation(a, b, c) {
     } 
   return arr;
 }
+solveEquation(a, b, c);
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let range = percent / 100 / 12;
     let creditBody = amount - contribution;
-    let monthAmount = creditBody * (coeff + (range / (((1 + range) ** countMonths) - 1)));
+    let monthAmount = creditBody * (range + (range / (((1 + range) ** countMonths) - 1)));
     let total = monthAmount * countMonths;
     let roundedTotal =  parseFloat(total.toFixed(2));
   
